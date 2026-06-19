@@ -21,7 +21,7 @@ export default function App() {
   };
 
   return (
-    <div className="wrap">
+    <>
       <div className="topbar">
         <span className="brand">Omar Almoghly</span>
         <a className="back" href="../index.html">
@@ -29,34 +29,36 @@ export default function App() {
         </a>
       </div>
 
-      <div className="eyebrow">Projet 02 · Devoir 3</div>
-      <h1>
-        Souvenirs <em>— jeu de mémoire</em>
-      </h1>
-      <p className="sub">
-        Trouve les paires correspondantes avant la fin du temps. Choisis ton niveau et ton thème.
-      </p>
+      <div className="wrap">
+        <div className="eyebrow">Projet 02 · Devoir 3</div>
+        <h1>
+          Souvenirs <em>— jeu de mémoire</em>
+        </h1>
+        <p className="sub">
+          Trouve les paires correspondantes avant la fin du temps. Choisis ton niveau et ton thème.
+        </p>
 
-      {screen === 'config' && <GameConfig onStart={startGame} />}
+        {screen === 'config' && <GameConfig onStart={startGame} />}
 
-      {screen === 'game' && (
-        <GameBoard
-          level={level}
-          theme={theme}
-          onFinish={finishGame}
-          onAbandon={() => finishGame(null)}
-        />
-      )}
+        {screen === 'game' && (
+          <GameBoard
+            level={level}
+            theme={theme}
+            onFinish={finishGame}
+            onAbandon={() => finishGame(null)}
+          />
+        )}
 
-      {screen === 'end' && (
-        <GameOver
-          result={result}
-          onReplay={() => setScreen('game')}
-          onConfig={() => setScreen('config')}
-        />
-      )}
+        {screen === 'end' && (
+          <GameOver
+            result={result}
+            onReplay={() => setScreen('game')}
+            onConfig={() => setScreen('config')}
+          />
+        )}
 
-      <footer>OMAR ALMOGHLY — SEG3525 · UNIVERSITÉ D'OTTAWA · 2026</footer>
-    </div>
+        <footer>OMAR ALMOGHLY — SEG3525 · UNIVERSITÉ D'OTTAWA · 2026</footer>
+      </div>
+    </>
   );
 }

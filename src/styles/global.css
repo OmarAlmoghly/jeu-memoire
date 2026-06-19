@@ -32,7 +32,6 @@ body {
   align-items: center;
   border-bottom: 1px solid var(--border);
   font-family: 'Helvetica Neue', Arial, sans-serif;
-  margin: 0 -24px 0;
 }
 
 .brand {
