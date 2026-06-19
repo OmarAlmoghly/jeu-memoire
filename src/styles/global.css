@@ -26,28 +26,34 @@ body {
 
 .topbar {
   background: #0e1a10;
-  padding: 18px 40px;
+  padding: 24px 48px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   border-bottom: 1px solid var(--border);
-  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-family: 'Georgia', 'Times New Roman', serif;
 }
 
 .brand {
   color: var(--gold-soft);
-  letter-spacing: 0.15em;
-  font-size: 0.95rem;
+  letter-spacing: 0.25em;
+  font-size: 1rem;
   text-transform: uppercase;
+  font-weight: 400;
 }
 
 .back {
-  color: var(--muted);
-  font-size: 0.78rem;
-  letter-spacing: 0.1em;
+  color: var(--cream);
+  font-size: 0.85rem;
+  letter-spacing: 0.15em;
   text-transform: uppercase;
   text-decoration: none;
   cursor: pointer;
+  font-family: 'Georgia', 'Times New Roman', serif;
+}
+
+.back:hover {
+  color: var(--gold-soft);
 }
 
 .wrap {
